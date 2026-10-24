@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10172b">
+  <title>SkyPulse | Smart Weather</title>
+<link rel="stylesheet" href="../css/style.css">
+<script type="module" src="../js/main.js"></script>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="logo" href="#" aria-label="SkyPulse home">
+        <span class="logo-icon">◉</span>
+        <span>Sky<span class="accent">Pulse</span></span>
+      </a>
+      <span class="live-label"><span class="live-dot"></span> LIVE WEATHER</span>
+      <button id="unitToggle" class="unit-toggle" type="button">°C / °F</button>
+    </header>
+
+    <section class="welcome">
+      <p class="eyebrow">YOUR PERSONAL WEATHER STATION</p>
+      <h1>Feel the <span class="accent">forecast.</span></h1>
+      <p class="subtitle">Weather insights for wherever life takes you.</p>
+
+      <form id="searchForm" class="search-form">
+        <span class="search-symbol">⌕</span>
+        <input id="cityInput" placeholder="Search any city..." required
+          aria-label="Search city" autocomplete="off">
+        <button id="searchButton" type="submit">Explore <span>→</span></button>
+      </form>
+
+      <div class="recent-row">
+        <span>RECENT</span>
+        <div id="recentCities" class="recent-cities"></div>
+      </div>
+    </section>
+
+    <div id="loading" class="loading hidden" role="status">
+      <div class="spinner"></div>
+      <p>Reading the atmosphere...</p>
+    </div>
+
+    <p id="errorMessage" class="error-message hidden" role="alert"></p>
+
+    <div id="weatherContainer" class="hidden">
+      <section id="heroWeather" class="hero-weather"></section>
+
+      <section class="section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">PLAN YOUR DAY</p>
+            <h2>Weather at a glance</h2>
+          </div>
+        </div>
+        <div id="detailsGrid" class="details-grid"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">WHAT'S COMING</p>
+            <h2>Three-day outlook</h2>
+          </div>
+          <span class="section-note">UPCOMING DAYS</span>
+        </div>
+        <div id="forecastGrid" class="forecast-grid"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">SMART SUGGESTION</p>
+            <h2>Your day, upgraded</h2>
+          </div>
+          <span class="suggestion-icon">✦</span>
+        </div>
+        <div id="lifestyleCard" class="lifestyle-card"></div>
+      </section>
+    </div>
+
+    <footer>
+      <span class="logo small-logo">◉ Sky<span class="accent">Pulse</span></span>
+      <p>Made for your everyday adventures · Powered by Open-Meteo</p>
+    </footer>
+  </main>
+</body>
+</html>
